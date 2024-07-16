@@ -3,7 +3,7 @@ import { z } from 'zod'
 
 export const env = createEnv({
   client: {
-    VITE_PUBLIC_API_URL: z.string()
+    VITE_PUBLIC_API_URL: z.string().optional()
   },
   runtimeEnv: import.meta.env,
   skipValidation: import.meta.env.DEV,
