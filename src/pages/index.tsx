@@ -1,9 +1,11 @@
 import { Snippet } from '@/components'
 import { MainLayout } from '@/components/layout'
+import { env } from '@/env'
 
 export default function Home() {
   return (
     <MainLayout>
+      {env.VITE_PUBLIC_API_URL}
       <div className='container pb-24'>
         <div className='mt-6'>
           <h1 className='text-3xl font-bold'>Installation</h1>
