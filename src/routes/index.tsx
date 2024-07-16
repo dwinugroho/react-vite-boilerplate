@@ -17,7 +17,7 @@ const pages = Object.keys(modules)
       path[path.length - 1] === '/' ? path.substring(0, path.length - 1) : path
 
     return {
-      path: path.replace(/\[(.+)\]/, ':$1'),
+      path: path.replace(/\[([^[\]]+)\]/g, ':$1').replace(/\/\([^()]*\)/g, ''),
       Component: React.lazy(
         () => import(/* @vite-ignore */ `../pages${compPath}`)
       )
