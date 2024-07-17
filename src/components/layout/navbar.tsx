@@ -10,7 +10,7 @@ export const Navbar: React.FC = () => {
       <KrafanLogo />
       <div className='flex items-center gap-6'>
         <ThemeSwitcher />
-        <a href='https://github.com/dwinugroho/nextjs-typescript-tailwind'>
+        <a href='https://github.com/dwinugroho/react-vite-boilerplate'>
           <SiGithub />
         </a>
       </div>
